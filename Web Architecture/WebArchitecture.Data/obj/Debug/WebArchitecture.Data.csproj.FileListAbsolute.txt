@@ -1,0 +1,12 @@
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\WebArchitecture.Data.dll.config
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\WebArchitecture.Data.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\WebArchitecture.Data.pdb
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\EntityFramework.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\WebArchitecture.Entities.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\WebArchitecture.Entities.pdb
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\EntityFramework.xml
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\obj\Debug\WebArchitecture.Data.csprojResolveAssemblyReference.cache
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\obj\Debug\WebArchitecture.Data.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Data\obj\Debug\WebArchitecture.Data.pdb

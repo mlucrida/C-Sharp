@@ -1,0 +1,5 @@
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Entities\bin\Debug\WebArchitecture.Entities.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Entities\bin\Debug\WebArchitecture.Entities.pdb
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Entities\obj\Debug\WebArchitecture.Entities.csprojResolveAssemblyReference.cache
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Entities\obj\Debug\WebArchitecture.Entities.dll
+C:\Users\mattlucrida\Documents\Visual Studio 2015\Projects\WebArch\WebArchitecture.Entities\obj\Debug\WebArchitecture.Entities.pdb
