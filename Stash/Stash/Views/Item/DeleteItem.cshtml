@@ -1,0 +1,75 @@
+﻿@model Entities.Item
+
+@{
+    ViewBag.Title = "DeleteItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Item</h2>
+
+<h3>Are you sure you want to delete @Model.name?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Description:
+        </dt>
+
+        <dd>
+            @if (Model.object_description != null)
+            {
+            @Html.DisplayFor(model => model.object_description)
+            }
+            else
+            {
+                <i>No Description</i>
+            }
+        </dd>
+
+        <dt>
+            Created On:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.create_date)
+        </dd>
+
+        <dt>
+            Item Group:
+        </dt>
+
+        <dd>
+            @if (Model.itemgroupkey != null)
+            {
+                @Html.DisplayFor(model => model.Itemgroup.name)
+            }
+            else
+            {
+                <i>Not Grouped</i>
+            }
+        </dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.name)
+        @Html.HiddenFor(model => model.object_description)
+        @Html.HiddenFor(model => model.itemkey)
+        @Html.HiddenFor(model => model.Itemgroup)
+        @Html.HiddenFor(model => model.Itemtransactions)
+        @Html.HiddenFor(model => model.RFIDkey)
+        @Html.HiddenFor(model => model.itemgroupkey)
+        @Html.HiddenFor(model => model.photokey)
+        @Html.HiddenFor(model => model.create_date)
+        @Html.HiddenFor(model => model.delete_date)
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@* Author: Daniel Sacdalan *@
+@{
+    ViewBag.Title = "Registered Items";
+}
+
+<h1>@ViewBag.Title</h1>
+<div class="input-group col-md-9">
+    <span class="input-group-btn">
+        <div>
+            @using (Html.BeginForm())
+            {
+                @Html.TextBox("SearchString", null, new {@class = "form-control", @placeholder = "Search for Item"})
+                 <input class="btn btn-success" type="submit" value="Search">
+            }
+            </div>
+    </span>
+</div>
+<div align="center">
+    @Html.ActionLink("Create Item", "CreateItem", "Item", null, new { @class = "btn btn-info" })
+</div>
+@*<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <b>Name: </b>@item.name
+            <b>Description: </b>@item.object_description
+            <b>Create Date: </b>@item.create_date
+            <b>@Html.ActionLink("Edit", "UpdateItem", new { id=item.itemkey }) </b>
+        </li>
+    }
+</ul>*@
+
+
+    <br />
+<table class="table table-striped">
+    <tr>
+        <td><b>Name</b></td>
+        <td><b>Description</b></td>
+        <td><b>Create Date</b></td>
+        <td><b>Modify</b></td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.name</td>
+            <td>@item.object_description</td>
+            <td>@item.create_date</td>
+            <td>@Html.ActionLink("Edit", "UpdateItem", new { id = item.itemkey }) | @Html.ActionLink("Delete", "DeleteItem", new { id = item.itemkey})</td>
+        </tr>
+    }
+</table>

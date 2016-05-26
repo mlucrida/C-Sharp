@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Stash</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Stash" src="~/Content/stashtag.png" height="30" width="30"/>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Stash", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Boxes", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Items", "Index", "Item")</li>
+                    @*<li>@Html.ActionLink("Groups", "Index", "Group")</li>*@
+                    <li>@Html.ActionLink("About", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container body-content">
+     @RenderBody()
+    </div>
+    <div>
+    <hr />
+    <footer>
+        <p align="center">&copy; @DateTime.Now.Year - Team 1700</p>
+    </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+</body>
+</html>

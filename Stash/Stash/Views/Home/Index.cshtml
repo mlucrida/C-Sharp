@@ -1,0 +1,65 @@
+﻿@* Author: Daniel Sacdalan *@
+@{
+    ViewBag.Title = "Boxes";
+}
+<h1>@ViewBag.Title</h1>
+    <div class="input-group col-md-9">
+    <span class="input-group-btn">
+
+        @using (Html.BeginForm())
+        {
+             
+            @Html.TextBox("SearchString", null, new {@class = "form-control", @placeholder = "Enter box name"})
+            <input class="btn btn-success" type="submit" value="Search" />
+                @*<form class="navbar-form navbar-left">
+                <div class="form-group">
+                    Html.TextBox("SearchString")
+                    <input type="text" class="form-control" id="SearchString" placeholder="Enter Box Name">
+                
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+                    </div>
+                    </form>*@
+                @*<form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="submit" class="btn btn-default" id="SearchString">Search</button>
+                    </div>
+                </form>*@
+                
+        }
+
+    </span>
+    </div>
+       @foreach (var box in Model.Boxes)
+       {
+           <div class="col-md-4" align="center">
+               <hr />
+               <h3>@box.name</h3>
+
+               <table class="table table-striped">
+                   <tr>
+                       <td><b>Name</b></td>
+                   </tr>
+                       @foreach (var item in Model.BoxedItems)
+                       {
+                           if (item.Boxkey == box.boxkey)
+                           {
+                               <tr><td>@item.Item.name</td></tr>
+                           }
+                       }
+               </table>
+
+               @*<ul>
+                   @foreach (var item in Model.BoxedItems)
+                   {
+                       if (item.Boxkey == box.boxkey)
+                       {
+                           <li>@item.Item.name</li>
+                       }
+                   }
+               </ul>*@
+           </div>
+       }
+

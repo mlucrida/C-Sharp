@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StashModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Box">
+    <Key>
+      <PropertyRef Name="boxkey" />
+    </Key>
+    <Property Name="boxkey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="object_description" Type="varchar" MaxLength="100" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="delete_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="itemkey" />
+    </Key>
+    <Property Name="itemkey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RFIDkey" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="object_description" Type="varchar" MaxLength="100" />
+    <Property Name="itemgroupkey" Type="int" />
+    <Property Name="photokey" Type="int" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="delete_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Itemgroup">
+    <Key>
+      <PropertyRef Name="itemgroupkey" />
+    </Key>
+    <Property Name="itemgroupkey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="photokey" Type="int" />
+    <Property Name="object_description" Type="varchar" MaxLength="100" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="delete_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Itemtransaction">
+    <Key>
+      <PropertyRef Name="transactionkey" />
+    </Key>
+    <Property Name="transactionkey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="itemkey" Type="int" Nullable="false" />
+    <Property Name="boxkey" Type="int" Nullable="false" />
+    <Property Name="in_time" Type="datetime" Nullable="false" />
+    <Property Name="out_time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="photokey" />
+    </Key>
+    <Property Name="photokey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="photopath" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Item__itemgroupk__173876EA">
+    <End Role="Itemgroup" Type="Self.Itemgroup" Multiplicity="0..1" />
+    <End Role="Item" Type="Self.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Itemgroup">
+        <PropertyRef Name="itemgroupkey" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="itemgroupkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Item__photokey__182C9B23">
+    <End Role="Photo" Type="Self.Photo" Multiplicity="0..1" />
+    <End Role="Item" Type="Self.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Photo">
+        <PropertyRef Name="photokey" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="photokey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Itemgroup__photo__145C0A3F">
+    <End Role="Photo" Type="Self.Photo" Multiplicity="0..1" />
+    <End Role="Itemgroup" Type="Self.Itemgroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Photo">
+        <PropertyRef Name="photokey" />
+      </Principal>
+      <Dependent Role="Itemgroup">
+        <PropertyRef Name="photokey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Itemtrans__boxke__1BFD2C07">
+    <End Role="Box" Type="Self.Box" Multiplicity="1" />
+    <End Role="Itemtransaction" Type="Self.Itemtransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Box">
+        <PropertyRef Name="boxkey" />
+      </Principal>
+      <Dependent Role="Itemtransaction">
+        <PropertyRef Name="boxkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Itemtrans__itemk__1B0907CE">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="Itemtransaction" Type="Self.Itemtransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemkey" />
+      </Principal>
+      <Dependent Role="Itemtransaction">
+        <PropertyRef Name="itemkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StashModelStoreContainer">
+    <EntitySet Name="Box" EntityType="Self.Box" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Itemgroup" EntityType="Self.Itemgroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Itemtransaction" EntityType="Self.Itemtransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Photo" EntityType="Self.Photo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Item__itemgroupk__173876EA" Association="Self.FK__Item__itemgroupk__173876EA">
+      <End Role="Itemgroup" EntitySet="Itemgroup" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Item__photokey__182C9B23" Association="Self.FK__Item__photokey__182C9B23">
+      <End Role="Photo" EntitySet="Photo" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Itemgroup__photo__145C0A3F" Association="Self.FK__Itemgroup__photo__145C0A3F">
+      <End Role="Photo" EntitySet="Photo" />
+      <End Role="Itemgroup" EntitySet="Itemgroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Itemtrans__boxke__1BFD2C07" Association="Self.FK__Itemtrans__boxke__1BFD2C07">
+      <End Role="Box" EntitySet="Box" />
+      <End Role="Itemtransaction" EntitySet="Itemtransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Itemtrans__itemk__1B0907CE" Association="Self.FK__Itemtrans__itemk__1B0907CE">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Itemtransaction" EntitySet="Itemtransaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StashModelStoreContainer" CdmEntityContainer="StashEntities">
+    <EntitySetMapping Name="Boxes">
+      <EntityTypeMapping TypeName="StashModel.Box">
+        <MappingFragment StoreEntitySet="Box">
+          <ScalarProperty Name="boxkey" ColumnName="boxkey" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="object_description" ColumnName="object_description" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="delete_date" ColumnName="delete_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="StashModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="itemkey" ColumnName="itemkey" />
+          <ScalarProperty Name="RFIDkey" ColumnName="RFIDkey" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="object_description" ColumnName="object_description" />
+          <ScalarProperty Name="itemgroupkey" ColumnName="itemgroupkey" />
+          <ScalarProperty Name="photokey" ColumnName="photokey" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="delete_date" ColumnName="delete_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Itemgroups">
+      <EntityTypeMapping TypeName="StashModel.Itemgroup">
+        <MappingFragment StoreEntitySet="Itemgroup">
+          <ScalarProperty Name="itemgroupkey" ColumnName="itemgroupkey" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="photokey" ColumnName="photokey" />
+          <ScalarProperty Name="object_description" ColumnName="object_description" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="delete_date" ColumnName="delete_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Itemtransactions">
+      <EntityTypeMapping TypeName="StashModel.Itemtransaction">
+        <MappingFragment StoreEntitySet="Itemtransaction">
+          <ScalarProperty Name="transactionkey" ColumnName="transactionkey" />
+          <ScalarProperty Name="itemkey" ColumnName="itemkey" />
+          <ScalarProperty Name="boxkey" ColumnName="boxkey" />
+          <ScalarProperty Name="in_time" ColumnName="in_time" />
+          <ScalarProperty Name="out_time" ColumnName="out_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="StashModel.Photo">
+        <MappingFragment StoreEntitySet="Photo">
+          <ScalarProperty Name="photokey" ColumnName="photokey" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="photopath" ColumnName="photopath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

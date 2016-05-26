@@ -1,0 +1,14 @@
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\Entities.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\Entities.pdb
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\DataAccess\obj\Debug\DataAccess.pdb

@@ -1,0 +1,14 @@
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\Services.dll.config
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\Services.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\Services.pdb
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\DataAccess.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\Entities.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\EntityFramework.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\DataAccess.pdb
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\Entities.pdb
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\EntityFramework.xml
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\obj\Debug\Services.dll
+C:\Users\lucri\Source\Workspaces\Workspace\Stash\Stash\Services\obj\Debug\Services.pdb

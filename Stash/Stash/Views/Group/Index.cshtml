@@ -1,0 +1,21 @@
+﻿@* Author: Daniel Sacdalan *@
+@{
+    ViewBag.Title = "Item Groups";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (var group in Model.CurrentItemGroups)
+{
+    <h3>@group.name</h3>
+    <ul>
+        @foreach (var item in Model.ItemsInGroup)
+        {
+            if(item.itemgroupkey == group.itemgroupkey)
+            {
+                <li>@item.name</li>
+            }
+        }
+    </ul>
+}
